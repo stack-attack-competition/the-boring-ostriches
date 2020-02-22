@@ -33,6 +33,15 @@ func (users *UserSlice) Append (user User) {
 	*users = append(*users, user)
 }
 
+func (users *UserSlice) EmailExists (email string) bool {
+	for _, v := range *users {
+		if v.Email == email {
+			return true
+		}
+	}
+	return false
+}
+
 // TODO:
 // * [NOT HERE!] handle that one bet should be added to only one user
 // * 

@@ -1,5 +1,7 @@
 package ostrich
 
+import "encoding/json"
+
 type Challenge struct {
 	Id          string `json:"id"`
 	IsDeleted   bool   `json:"isDeleted"`
@@ -16,4 +18,14 @@ type ChallengeSlice []Challenge
 
 func (challenges *ChallengeSlice) Append(challenge Challenge) {
 	*challenges = append(*challenges, challenge)
+}
+
+func (challenge Challenge) Serialize() []byte {
+	b, err := json.Marshal(challenge)
+
+	if err != nil {
+		return []byte{}
+	}
+
+	return b
 }

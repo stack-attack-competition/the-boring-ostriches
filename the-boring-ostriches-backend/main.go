@@ -90,12 +90,12 @@ func main() {
 	})
 
 	r.Route("/challenges", func(r chi.Router) {
-		// r.Get("/", listChallenges)
-		// r.Post("/", addChallenge)
-		// r.Get("/{uuid}", getChallenge)
-		// r.Patch("/{uuid}", changeChallenge)
-		// r.Delete("/{uuid}", deleteChallenge)
-		// r.Get("/{uuid}/bets", getChallengeBets)
+		r.Get("/", listChallenges)
+		r.Post("/", addChallenge)
+		r.Get("/{uuid}", getChallenge)
+		r.Patch("/{uuid}", changeChallenge)
+		r.Delete("/{uuid}", deleteChallenge)
+		r.Get("/{uuid}/bets", getChallengeBets)
 	})
 
 	http.ListenAndServe(":"+port, r)
@@ -151,6 +151,31 @@ func listBets(w http.ResponseWriter, r *http.Request) {
 	w.Write(b)
 }
 
+func listChallenges(w http.ResponseWriter, r *http.Request) {
+	showDeleted := r.URL.Query().Get("showDeleted")
+	var RetChallenges ostrich.ChallengeSlice
+
+	for _, v := range Challenges {
+		if showDeleted == "true" {
+			RetChallenges.Append(v)
+		} else {
+			if v.IsDeleted == false {
+				RetChallenges.Append(v)
+			}
+		}
+	}
+
+	b, err := json.Marshal(RetChallenges)
+
+	if err != nil {
+		log.Fatal(err)
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	w.Write(b)
+}
+
 func getUser(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
 	_, err := guuid.Parse(uuid)
@@ -171,12 +196,31 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 func getBet(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
 	_, err := guuid.Parse(uuid)
+
 	if err != nil {
 		http.Error(w, http.StatusText(400), 400)
 		return
 	}
 
 	for _, v := range Bets {
+		if v.Id == uuid {
+			w.Write(v.Serialize())
+			return
+		}
+	}
+	http.Error(w, http.StatusText(404), 404)
+}
+
+func getChallenge(w http.ResponseWriter, r *http.Request) {
+	uuid := chi.URLParam(r, "uuid")
+	_, err := guuid.Parse(uuid)
+
+	if err != nil {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+
+	for _, v := range Challenges {
 		if v.Id == uuid {
 			w.Write(v.Serialize())
 			return
@@ -209,6 +253,41 @@ func getUserBets(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func getChallengeBets(w http.ResponseWriter, r *http.Request) {
+	uuid := chi.URLParam(r, "uuid")
+	foundBets := make(ostrich.BetSlice, 0)
+
+	challengeIdx := -1
+
+	for k, v := range Challenges {
+		if v.Id == uuid {
+			challengeIdx = k
+		}
+	}
+
+	if challengeIdx == -1 {
+		http.Error(w, http.StatusText(404), 404)
+		return
+	}
+
+	for _, v := range Bets {
+		if v.Challenge == uuid {
+			foundBets.Append(v)
+		}
+	}
+	if len(foundBets) > 0 {
+		b, err := json.Marshal(foundBets)
+
+		if err != nil {
+			log.Fatal(err)
+			http.Error(w, http.StatusText(500), 500)
+			return
+		}
+
+		w.Write(b)
+	}
+}
+
 func deleteUser(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
 	for i, v := range Users {
@@ -233,9 +312,31 @@ func deleteBet(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, http.StatusText(404), 404)
 }
 
+func deleteChallenge(w http.ResponseWriter, r *http.Request) {
+	uuid := chi.URLParam(r, "uuid")
+	for i, v := range Challenges {
+		if v.Id == uuid {
+			println("delete id: " + v.Id)
+			Challenges[i].IsDeleted = true
+			return
+		}
+	}
+	http.Error(w, http.StatusText(404), 404)
+}
+
 func addUser(w http.ResponseWriter, r *http.Request) {
 	var rawUser ostrich.User
-	json.NewDecoder(r.Body).Decode(&rawUser)
+	err := json.NewDecoder(r.Body).Decode(&rawUser)
+
+	if err != nil {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+
+	if Users.EmailExists(rawUser.Email) {
+		http.Error(w, http.StatusText(409), 409)
+		return
+	}
 
 	oldCount := len(Users)
 
@@ -251,7 +352,12 @@ func addUser(w http.ResponseWriter, r *http.Request) {
 
 func addBet(w http.ResponseWriter, r *http.Request) {
 	var rawBet ostrich.Bet
-	json.NewDecoder(r.Body).Decode(&rawBet)
+	err := json.NewDecoder(r.Body).Decode(&rawBet)
+
+	if err != nil {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
 
 	oldCount := len(Bets)
 
@@ -263,6 +369,27 @@ func addBet(w http.ResponseWriter, r *http.Request) {
 	Bets.Append(rawBet)
 
 	fmt.Printf("Bet count %d -> %d\n", oldCount, len(Bets))
+}
+
+func addChallenge(w http.ResponseWriter, r *http.Request) {
+	var rawChallenge ostrich.Challenge
+	err := json.NewDecoder(r.Body).Decode(&rawChallenge)
+
+	if err != nil {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+
+	oldCount := len(Challenges)
+
+	nuuid, _ := guuid.NewUUID()
+	fmt.Printf("Adding new challenge %v\t", nuuid.String())
+
+	rawChallenge.Id = nuuid.String()
+	rawChallenge.IsDeleted = false
+	Challenges.Append(rawChallenge)
+
+	fmt.Printf("Challenges count %d -> %d\n", oldCount, len(Challenges))
 }
 
 func changeUser(w http.ResponseWriter, r *http.Request) {
@@ -289,6 +416,10 @@ func changeUser(w http.ResponseWriter, r *http.Request) {
 	for k, v := range rawUser {
 		switch k {
 		case "email":
+			if Users.EmailExists(v.(string)) {
+				http.Error(w, http.StatusText(409), 409)
+				return
+			}
 			Users[userIdx].Email = v.(string)
 		case "password":
 			Users[userIdx].Password = v.(string)
@@ -333,6 +464,49 @@ func changeBet(w http.ResponseWriter, r *http.Request) {
 			Bets[betIdx].Amount = int(v.(float64))
 		case "result":
 			Bets[betIdx].Result = int(v.(float64))
+		default:
+			http.Error(w, http.StatusText(400), 400)
+		}
+	}
+}
+
+func changeChallenge(w http.ResponseWriter, r *http.Request) {
+	uuid := chi.URLParam(r, "uuid")
+
+	var rawChallenge map[string]interface{}
+	json.NewDecoder(r.Body).Decode(&rawChallenge)
+
+	fmt.Printf("Changing current challenge %s\n", uuid)
+
+	challengeIdx := -1
+
+	for k, v := range Challenges {
+		if v.Id == uuid {
+			challengeIdx = k
+		}
+	}
+
+	if challengeIdx == -1 {
+		http.Error(w, http.StatusText(404), 404)
+		return
+	}
+
+	for k, v := range rawChallenge {
+		switch k {
+		case "author":
+			Challenges[challengeIdx].Author = v.(string)
+		case "title":
+			Challenges[challengeIdx].Title = v.(string)
+		case "description":
+			Challenges[challengeIdx].Description = v.(string)
+		case "isActive":
+			Challenges[challengeIdx].IsActive = v.(bool)
+		case "endDate":
+			Challenges[challengeIdx].EndDate = v.(string)
+		case "OutCome":
+			Challenges[challengeIdx].Outcome = v.(bool)
+		case "proofUrl":
+			Challenges[challengeIdx].ProofUrl = v.(string)
 		default:
 			http.Error(w, http.StatusText(400), 400)
 		}

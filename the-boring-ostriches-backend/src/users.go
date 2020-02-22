@@ -7,12 +7,12 @@ import (
 // User represents user
 // Id: magic
 type User struct {  
-    Id string
-    Email  string
-	FirstName       string
-	LastName string
-	Picture string
-	IsDeleted bool
+    Id string `json:"id"`
+    Email  string `json:"email"`
+	FirstName       string `json:"firstName"`
+	LastName string `json:"lastName"`
+	Picture string `json:"pictureUrl"`
+	IsDeleted bool `json:"isDeleted"`
 	Password string `json:"-"`
 	Bets []Bet `json:"-"`
 }
@@ -27,6 +27,12 @@ func (user User) Serialize() []byte {
 	return b
 }
 
+type UserSlice []User
+
+func (users *UserSlice) Append (user User) {
+	*users = append(*users, user)
+}
+
 // TODO:
 // * [NOT HERE!] handle that one bet should be added to only one user
 // * 
@@ -38,3 +44,4 @@ func (user *User) AddBet(newBet Bet) {
 	bu, _ := json.Marshal(user)
 	println(string(bu))
 }
+

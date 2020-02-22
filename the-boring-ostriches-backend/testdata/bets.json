@@ -1,0 +1,370 @@
+[
+    {
+        "id": "3d2e3ea9-6399-5a89-b635-8ec3e8d2e43e",
+        "isDeleted": false,
+        "author": "f7a88f11-2a70-5f3b-9b93-1561dcae5fc3",
+        "challenge": "6459a98b-8640-52f3-bc19-1c7b05ca0415",
+        "inFavor": true,
+        "amount": 413,
+        "result": 435
+    },
+    {
+        "id": "e6cc5ad8-23eb-56be-b6b6-1f4b774af825",
+        "isDeleted": false,
+        "author": "1a521c8b-b1cd-5503-a555-3f7731b40493",
+        "challenge": "a5740918-582e-5c01-845c-e8ccec083c39",
+        "inFavor": true,
+        "amount": 483,
+        "result": 421
+    },
+    {
+        "id": "4c27cf17-2a80-5457-869c-c642e0ca84a0",
+        "isDeleted": false,
+        "author": "30e32ab3-1de6-5964-8e20-0df3dc11c684",
+        "challenge": "2707c919-ffaf-5b27-87a2-a2a58338b6d6",
+        "inFavor": false,
+        "amount": 306,
+        "result": 224
+    },
+    {
+        "id": "a59bf1b0-35bf-53a3-9caa-ef9dd10547a1",
+        "isDeleted": false,
+        "author": "9259bfc4-92b5-55fe-a81d-14d80f0c07f8",
+        "challenge": "eb83d99e-4d87-5b76-8bc8-6f71aa614355",
+        "inFavor": true,
+        "amount": 457,
+        "result": 482
+    },
+    {
+        "id": "ac8649d9-d1cc-573f-96aa-92df11967095",
+        "isDeleted": false,
+        "author": "03f63fe6-c7d7-57e5-b800-dc06dd5a95d8",
+        "challenge": "98026db5-388f-5f63-8925-52ceb9fbec7c",
+        "inFavor": false,
+        "amount": 180
+    },
+    {
+        "id": "cc4a5ee2-c206-5b1d-ad68-c0373a9ba877",
+        "isDeleted": false,
+        "author": "93c9d233-dc6a-5c23-b42d-13e242405d49",
+        "challenge": "a846cac8-76cc-5689-9609-c8b147f98c72",
+        "inFavor": true,
+        "amount": 351,
+        "result": -31
+    },
+    {
+        "id": "a14a3757-ecc7-52de-8829-18e219e48fbd",
+        "isDeleted": false,
+        "author": "e2375b3b-03ba-5e69-9ab7-204ff414fca8",
+        "challenge": "65a4eec8-472f-5d1e-9190-872dda1a47d1",
+        "inFavor": true,
+        "amount": 172,
+        "result": 163
+    },
+    {
+        "id": "d529af17-25e8-5153-812b-f06f3ab9e245",
+        "isDeleted": false,
+        "author": "0c1818a0-8535-59f4-b97f-9c72bc471054",
+        "challenge": "6f77f0f8-9b69-513c-90e4-b4fa2a936842",
+        "inFavor": true,
+        "amount": 476
+    },
+    {
+        "id": "aae244db-6900-5fc9-a868-192a655bb271",
+        "isDeleted": false,
+        "author": "1164835d-347f-5f28-a891-3d63e3b9fff8",
+        "challenge": "76f5ebfa-403a-5cf5-8a5d-8070192ed8a2",
+        "inFavor": true,
+        "amount": 227,
+        "result": 189
+    },
+    {
+        "id": "9d61680c-8146-555e-87c7-dce3489e4ece",
+        "isDeleted": false,
+        "author": "3931d7d1-7b38-5462-a6c2-4ef347d4551e",
+        "challenge": "0c32c42b-c2b9-59fd-ac7f-07e680c17c72",
+        "inFavor": false,
+        "amount": 369,
+        "result": -358
+    },
+    {
+        "id": "46cb09e7-1811-5aed-aa7c-bbacaf178006",
+        "isDeleted": false,
+        "author": "8e69d795-0e36-5756-b0e5-0eaa1e89dbc5",
+        "challenge": "ecd47967-6904-581a-84e9-8a7356b3d9cc",
+        "inFavor": true,
+        "amount": 204
+    },
+    {
+        "id": "f1450e6c-e359-5d41-aef2-bbc9192e79e1",
+        "isDeleted": false,
+        "author": "9c326ed7-f6f1-5cca-bb9b-91ccf09d7d92",
+        "challenge": "6f226f32-26a2-5452-97d3-22b911f60af7",
+        "inFavor": false,
+        "amount": 323
+    },
+    {
+        "id": "555cc817-1c88-5f76-a719-2511e0829c98",
+        "isDeleted": false,
+        "author": "3f69e095-75ee-5fb2-946d-12d6024c4c7d",
+        "challenge": "792cf0b2-cfa7-53f5-be6a-be88fd8ed1ae",
+        "inFavor": true,
+        "amount": 238
+    },
+    {
+        "id": "39a68d46-fcdf-5ee2-a1c3-a9973f26e1c0",
+        "isDeleted": false,
+        "author": "911b9cf0-4709-5096-b7db-37c6c7edb6bb",
+        "challenge": "3858f6db-144c-51cd-8706-acc2c50ccb67",
+        "inFavor": true,
+        "amount": 244,
+        "result": 385
+    },
+    {
+        "id": "b6a0b812-575e-5906-bdf0-e7f996d4b832",
+        "isDeleted": false,
+        "author": "f3049890-41ba-5b4d-91df-b34d9ebde22f",
+        "challenge": "7824e12d-dd6e-5eff-8b68-c75f47f24df5",
+        "inFavor": true,
+        "amount": 363,
+        "result": 681
+    },
+    {
+        "id": "fbd94954-a665-5ce7-bc34-1fffb1bea746",
+        "isDeleted": false,
+        "author": "9761ce75-c485-5f9e-bae7-854bc837f9e9",
+        "challenge": "ef21ebf9-d39b-5b81-a8d5-ed904a4ac8a8",
+        "inFavor": true,
+        "amount": 133,
+        "result": -298
+    },
+    {
+        "id": "bc67fd96-e387-5004-bcfe-816d540c44ed",
+        "isDeleted": false,
+        "author": "1da15524-6b8a-5ae0-b4f7-f3e7960f2c0d",
+        "challenge": "025843bc-82c3-552f-ae93-e7e1f0f47a3a",
+        "inFavor": true,
+        "amount": 159
+    },
+    {
+        "id": "186f0760-d428-5c0d-ac5a-4f8c3829a945",
+        "isDeleted": false,
+        "author": "abb7a6a2-a042-507c-850d-d596349a2eff",
+        "challenge": "fa07d740-1d5a-5353-b940-780f6d0a7250",
+        "inFavor": true,
+        "amount": 292
+    },
+    {
+        "id": "dc5d5e3b-6757-5fa7-8a63-474c1f909ae6",
+        "isDeleted": false,
+        "author": "59efb07a-6efe-5b29-81a0-37b818097013",
+        "challenge": "2f315e4f-c080-5c58-a524-86b4f5247b21",
+        "inFavor": true,
+        "amount": 415
+    },
+    {
+        "id": "a169d28f-d2d3-597e-b10a-addf751c3d90",
+        "isDeleted": false,
+        "author": "77d17c10-ca93-5a55-82c5-fdce8c0b6cbc",
+        "challenge": "a647e950-6834-526c-bf79-e451f962196a",
+        "inFavor": false,
+        "amount": 127
+    },
+    {
+        "id": "4cbca62d-ca8f-5ea3-a6b8-93466164870e",
+        "isDeleted": false,
+        "author": "167f473a-9c2e-5176-ac78-8245278f333a",
+        "challenge": "5996553a-17c1-5c3c-9615-8fd1ab1b57cb",
+        "inFavor": false,
+        "amount": 500,
+        "result": 808
+    },
+    {
+        "id": "817839c0-634c-5a34-95c7-3c323c6845cd",
+        "isDeleted": false,
+        "author": "cb8197e6-f8a9-5aec-87df-1e15baf99640",
+        "challenge": "eaa88828-3b71-5916-bf19-073773c21e0c",
+        "inFavor": false,
+        "amount": 370
+    },
+    {
+        "id": "c15c5206-3040-5106-9d54-4643c81468e3",
+        "isDeleted": false,
+        "author": "03fcf0e9-c269-50be-bef7-98b2420f2889",
+        "challenge": "e81f7b08-5f19-54bd-9c72-e4dccd29ca4c",
+        "inFavor": true,
+        "amount": 322
+    },
+    {
+        "id": "1670b163-068d-5f3a-a1a9-865b4c58eb5c",
+        "isDeleted": false,
+        "author": "957478dd-de18-55a4-98af-d8f3954ecc04",
+        "challenge": "66b10e22-2745-513c-b6f9-51d147ad1419",
+        "inFavor": true,
+        "amount": 319,
+        "result": 888
+    },
+    {
+        "id": "91769351-739b-5b24-b64d-196db98cbe7e",
+        "isDeleted": false,
+        "author": "a7fa1d8b-b0d2-5394-80de-79c87f643b84",
+        "challenge": "59a4daa8-2152-5963-97a3-c8e69a3c4ff9",
+        "inFavor": false,
+        "amount": 462
+    },
+    {
+        "id": "3c3ebb52-594c-55b1-bd8a-5530bde434b4",
+        "isDeleted": false,
+        "author": "5e5927b5-6caa-5ee0-ad70-f28ee8c48e65",
+        "challenge": "21467b51-f2a5-52fb-beec-92fe7cda4c3b",
+        "inFavor": true,
+        "amount": 124,
+        "result": 220
+    },
+    {
+        "id": "2ea5eba4-c7d3-5940-8321-4656121241ea",
+        "isDeleted": false,
+        "author": "447d59f8-23fe-5e4e-b4af-58ce3764dbe7",
+        "challenge": "abfe78d7-77b7-55c5-9d7a-513a630ecf32",
+        "inFavor": true,
+        "amount": 176,
+        "result": 970
+    },
+    {
+        "id": "c7c5b8fe-579e-590d-801e-e7a7c08123b5",
+        "isDeleted": false,
+        "author": "e9f6575e-5173-5b1b-819c-1e02e91505ca",
+        "challenge": "db47fea3-9c80-558e-ad85-c402a5fc42f7",
+        "inFavor": true,
+        "amount": 482,
+        "result": 51
+    },
+    {
+        "id": "835d3bfa-4dad-52e1-87f4-52701c6622a0",
+        "isDeleted": false,
+        "author": "773cd4f2-69e8-519b-b743-36069267cdc9",
+        "challenge": "b178fcd2-ee41-5284-921a-ce21361c72fe",
+        "inFavor": false,
+        "amount": 314,
+        "result": -468
+    },
+    {
+        "id": "0ee7b1da-7444-5c87-9112-1658d2dc2559",
+        "isDeleted": false,
+        "author": "2c2b02bc-7d26-5a69-bbc3-e45888a76c26",
+        "challenge": "0332e9b2-aadc-5dfc-a72b-494a9e752d2c",
+        "inFavor": false,
+        "amount": 17,
+        "result": 932
+    },
+    {
+        "id": "08e14178-cb4c-5eca-aa9e-03eaf5a9b40c",
+        "isDeleted": false,
+        "author": "2f436c61-ae34-557b-8dbe-1854e13cd1b6",
+        "challenge": "79fbe8b7-b93e-5166-94d7-489d404c5061",
+        "inFavor": true,
+        "amount": 406,
+        "result": -318
+    },
+    {
+        "id": "14f94e9f-b2c7-57ad-821f-1faaf442f0ce",
+        "isDeleted": false,
+        "author": "a38f0d6f-bc15-5e5f-b517-7b005deb7175",
+        "challenge": "403d619d-6d74-5869-895b-217d5445332a",
+        "inFavor": false,
+        "amount": 237,
+        "result": 848
+    },
+    {
+        "id": "8056f5c2-3cb3-5f25-8087-56cf880afe1d",
+        "isDeleted": false,
+        "author": "8bf24fe1-30f7-5edf-a0e4-8dacc0579dc2",
+        "challenge": "f93322e3-304e-5b28-8458-5e56c89c4187",
+        "inFavor": true,
+        "amount": 398,
+        "result": 805
+    },
+    {
+        "id": "fb4c8fef-8aa0-5551-9163-c3e45edc54eb",
+        "isDeleted": false,
+        "author": "dd2bb066-9c5b-59f4-a388-0cd37694c9ec",
+        "challenge": "d169586f-2d60-5225-a3ed-87d51eff83f4",
+        "inFavor": true,
+        "amount": 40,
+        "result": 641
+    },
+    {
+        "id": "026c5238-c9cc-5d4b-8fe0-265224f11706",
+        "isDeleted": false,
+        "author": "94a00d74-616e-556d-96f6-a2da7fd381a0",
+        "challenge": "5b57fa78-40d1-5cbe-a301-c347f8a22ce9",
+        "inFavor": true,
+        "amount": 412
+    },
+    {
+        "id": "ea229248-a1b1-5d95-8cf5-3baf36ecf313",
+        "isDeleted": false,
+        "author": "d07f6e86-04dc-5179-b31f-033c9c3050db",
+        "challenge": "b6bacb41-b051-5627-a3a2-f640228c5e82",
+        "inFavor": true,
+        "amount": 425
+    },
+    {
+        "id": "d22ff8d2-58ad-5ea1-83fd-8e601e777308",
+        "isDeleted": false,
+        "author": "f82f04ce-f464-5eb8-a4f7-58263bd816b2",
+        "challenge": "b7bdff6c-7d1f-51c1-85fa-ae7f7ab7d6ae",
+        "inFavor": true,
+        "amount": 125,
+        "result": 797
+    },
+    {
+        "id": "58082fea-d5e5-5084-89db-254190a294ad",
+        "isDeleted": false,
+        "author": "0b66c0de-251a-5640-ae8b-1e43f8103764",
+        "challenge": "865a7385-bbca-5303-b551-31c2f9962dd4",
+        "inFavor": false,
+        "amount": 113
+    },
+    {
+        "id": "d32b994d-81a7-5782-ac36-57cda45407d1",
+        "isDeleted": false,
+        "author": "db58f870-b8b5-5c0a-99df-c052c9df7327",
+        "challenge": "d1355bc8-acaf-5a81-9e8f-59eece5c5b79",
+        "inFavor": false,
+        "amount": 497
+    },
+    {
+        "id": "33891654-3dbc-59bc-8e24-7691301a7151",
+        "isDeleted": false,
+        "author": "ae92fd27-9709-598f-a1fe-5c6b43b4d11e",
+        "challenge": "10d9d5a2-5ceb-5928-9b23-147aaf5934ee",
+        "inFavor": false,
+        "amount": 59,
+        "result": 43
+    },
+    {
+        "id": "5e621295-162c-52a4-bd6d-a7076120e26e",
+        "isDeleted": false,
+        "author": "04763960-4809-5180-bd4b-5bc4bb4c84a5",
+        "challenge": "e3498f13-ba1d-50df-b294-98f93682393d",
+        "inFavor": true,
+        "amount": 396
+    },
+    {
+        "id": "e265395c-9d08-562f-a1da-8c8ecaf25a07",
+        "isDeleted": false,
+        "author": "ef0ad037-6dea-5b2c-92b2-8f65f53fdc7d",
+        "challenge": "addb4763-d946-507e-b984-59e91af85d4a",
+        "inFavor": false,
+        "amount": 233
+    },
+    {
+        "id": "4b77f717-6ecf-573b-acad-e8ff4e81f93f",
+        "isDeleted": false,
+        "author": "ef0ad037-6dea-5b2c-92b2-8f65f53fdc7d",
+        "challenge": "70b2ee84-1b04-5679-b9a3-114280dc6dd8",
+        "inFavor": false,
+        "amount": 481
+    }
+]

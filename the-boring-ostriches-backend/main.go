@@ -196,6 +196,7 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 	// I loved that I can easily get out the info from URLs
 	uuid := chi.URLParam(r, "uuid")
 	_, err := guuid.Parse(uuid)
+	if err != nil {
 		http.Error(w, http.StatusText(400), 400)
 		return
 	}

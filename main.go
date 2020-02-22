@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+	"log"
 	"net/http"
 	"github.com/go-chi/chi"
 )

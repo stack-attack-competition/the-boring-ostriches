@@ -1,1 +1,1 @@
-web: bin/main
+web: bin/return-of-the-boring-ostriches

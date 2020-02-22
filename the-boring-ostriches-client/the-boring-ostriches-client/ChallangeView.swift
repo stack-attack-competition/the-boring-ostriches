@@ -55,8 +55,20 @@ struct ChallangeDetails: View {
     var body: some View {
         VStack{
             Text(challange.title).font(.title).padding()
-            Spacer()
-            Text(challange.description).font(.body)
+            HStack{
+                Text((challange.outcome ? "success" : "declined"))
+                    .foregroundColor((challange.outcome ? .green : .red ))
+                Text(challange.endDate).font(.body).italic().padding()
+            }
+            if challange.outcome {
+                Button(challange.proofUrl) {
+                    guard let url = URL(string: self.challange.proofUrl) else { return }
+                    UIApplication.shared.open(url)
+                }
+            }
+            ScrollView {
+                Text(challange.description).font(.body)
+            }
             .padding()
         }.navigationBarTitle("\(Config.session!.firstName) \(Config.session!.lastName)")
     }

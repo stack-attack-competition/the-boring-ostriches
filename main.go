@@ -1,9 +1,10 @@
 package main
 
 import (
-	"os"
 	"log"
 	"net/http"
+	"os"
+
 	"github.com/go-chi/chi"
 )
 
@@ -14,11 +15,10 @@ func main() {
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
-   
 
 	r := chi.NewRouter()
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte('{"hello": "world"}'))
+		w.Write([]byte("{\"hello\": \"world\"}"))
 	})
-	http.ListenAndServe(":" + port, r)
+	http.ListenAndServe(":"+port, r)
 }

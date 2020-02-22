@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -20,6 +21,17 @@ import (
 var Users ostrich.UserSlice
 var Bets ostrich.BetSlice
 var Challenges ostrich.ChallengeSlice
+
+func MoraleHandler(w http.ResponseWriter, r *http.Request) {
+	var Path = "resources/demo.jpg"
+	img, err := os.Open(Path)
+	if err != nil {
+		log.Fatal(err) // perhaps handle this nicer
+	}
+	defer img.Close()
+	w.Header().Set("Content-Type", "image/jpeg") // <-- set the content-type header
+	io.Copy(w, img)
+}
 
 // Reads the test data
 func importStuff(suffix string) []byte {
@@ -115,6 +127,8 @@ func main() {
 		r.Post("/login", loginToApi)
 		r.Post("/register", addUser)
 	})
+
+	r.Get("/morale", MoraleHandler)
 
 	http.ListenAndServe(":"+port, r)
 }

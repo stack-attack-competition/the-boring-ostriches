@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8067A27B2401807D007521F0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A27A2401807D007521F0 /* Services.swift */; };
 		8097AA462401122000C0CE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA452401122000C0CE34 /* AppDelegate.swift */; };
 		8097AA482401122000C0CE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA472401122000C0CE34 /* SceneDelegate.swift */; };
 		8097AA4A2401122000C0CE34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA492401122000C0CE34 /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8067A27A2401807D007521F0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		8097AA422401122000C0CE34 /* the-boring-ostriches-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-boring-ostriches-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8097AA452401122000C0CE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8097AA472401122000C0CE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				8097AA532401122400C0CE34 /* Info.plist */,
 				8097AA4D2401122400C0CE34 /* Preview Content */,
 				8097AA7524011F0900C0CE34 /* Toast.swift */,
+				8067A27A2401807D007521F0 /* Services.swift */,
 			);
 			path = "the-boring-ostriches-client";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				8097AA7E2401624000C0CE34 /* ChallangeView.swift in Sources */,
 				8097AA462401122000C0CE34 /* AppDelegate.swift in Sources */,
 				8097AA7624011F0900C0CE34 /* Toast.swift in Sources */,
+				8067A27B2401807D007521F0 /* Services.swift in Sources */,
 				8097AA482401122000C0CE34 /* SceneDelegate.swift in Sources */,
 				8097AA7A24012B7C00C0CE34 /* Models.swift in Sources */,
 				8097AA78240127F000C0CE34 /* MainView.swift in Sources */,

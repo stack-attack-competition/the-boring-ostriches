@@ -21,25 +21,34 @@ class UserAuth: ObservableObject {
     }
 }
 
-class User {
-    private var id: String = ""
-    private var isDeleted: Bool = false
+class User: Decodable {
+    var id: String = ""
+    var isDeleted: Bool = false
     var email: String = ""
     var firstName: String = ""
     var lastName: String = ""
-    private var pictureUrl: String = ""
+    var pictureUrl: String = ""
+    var password: String = ""
+    init(_ id: String, email: String, firstname: String, lastname: String, pictureUrl: String, password: String) {
+        self.id = id
+        self.email = email
+        self.firstName = firstname
+        self.lastName = lastname
+        self.pictureUrl = pictureUrl
+        self.password = password
+    }
 }
 
-class Challange {
-    private var id: String = ""
-    private var isDeleted: Bool = false
-    private var author: String = ""
-    private var title: String = ""
-    private var description: String = ""
-    private var isActive: Bool = false
-    private var endDate: Date = Date.init() // TODO maybe string
-    private var outcome: Bool = false
-    private var proofUrl: String = ""
+class Challange: Identifiable, Decodable {
+    var id: String = ""
+    var isDeleted: Bool = false
+    var author: String = ""
+    var title: String = ""
+    var description: String = ""
+    // var isActive: Bool = false
+    var endDate: String = "" // TODO maybe string
+    var outcome: Bool = false
+    var proofUrl: String = ""
 }
 
 class Bet {

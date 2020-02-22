@@ -58,9 +58,9 @@ struct MainContentView: View {
     var body: some View {
         VStack {
             if content == "profile" {
-                ProfileView()
+                ProfileView(content: self.$content)
             } else if content == "challanges" {
-                ChallangeView()
+                ChallangeView(content: self.$content)
             } else {
                 Text("Hello my friends")
                 .bold()

@@ -3,13 +3,15 @@ package ostrich
 // User 
 // id: magic
 
+
+// User represents user
 type User struct {  
-    id string
-    email  string
-	firstName       string
-	lastName string
-	picture string
-	isDeleted bool
-	bets []Bet
+    Id string
+    Email  string
+	FirstName       string
+	LastName string
+	Picture string
+	IsDeleted bool
+	// bets []Bet
 	//challenges []Challenge
 }

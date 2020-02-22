@@ -5,7 +5,7 @@ package ostrich
 type Bet struct {
 	id        string
 	isDeleted string
-	author    User
+	// author    &User
 	//challenge Challenge
 	inFavor bool
 	amount  int

@@ -10,6 +10,8 @@ import (
 
 func main() {
 
+	// var Users []ostrich.User
+
 	port := os.Getenv("PORT")
 
 	if port == "" {
@@ -18,7 +20,10 @@ func main() {
 
 	r := chi.NewRouter()
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("{\"hello\": \"world\"}"))
+		w.Write([]byte("{\"CSIP\": true}"))
+	})
+	r.Get("/users", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("{\"users\": true}"))
 	})
 	http.ListenAndServe(":"+port, r)
 }

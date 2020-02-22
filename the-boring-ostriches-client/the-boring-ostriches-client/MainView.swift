@@ -125,7 +125,7 @@ struct MenuRow: View {
             Image(systemName: self.icon)
                 .foregroundColor(.gray)
                 .imageScale(.large)
-            Text(self.name)
+            Text(self.name).foregroundColor(.gray)
         }
     }
 }

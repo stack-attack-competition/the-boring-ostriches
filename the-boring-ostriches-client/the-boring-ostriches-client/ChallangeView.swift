@@ -11,12 +11,17 @@ import SwiftUI
 struct ChallangeView: View {
     @Binding var content: String
     @State var challanges: [Challange] = []
+    @State var navhappen: Bool = false
     var body: some View {
         NavigationView{
             List(self.challanges) { challange in
                 ChallangeRow(challange: challange)
             }
-        }.onAppear(perform: loadData)
+            .onAppear(perform: loadData)
+            .navigationBarItems(trailing: NavigationLink(destination: NewChallange(navhappen: self.$navhappen), isActive: $navhappen){
+                Text("+").foregroundColor(.blue)
+            }.font(.largeTitle))
+        }
     }
     func loadData() {
         guard let req = Config.getRequest(path: "/users/\(Config.session?.id ?? "")/challenges", method: "GET") else { return }
@@ -27,7 +32,6 @@ struct ChallangeView: View {
                     if let json = try? decoder.decode([Challange].self, from: data!){
                         self.challanges = json
                     }
-                    
                 }
             }
         }.resume()
@@ -56,8 +60,8 @@ struct ChallangeDetails: View {
         VStack{
             Text(challange.title).font(.title).padding()
             HStack{
-                Text((challange.outcome ? "success" : "declined"))
-                    .foregroundColor((challange.outcome ? .green : .red ))
+                Text((challange.outcome ? "success" : "under process"))
+                    .foregroundColor((challange.outcome ? .green : .orange ))
                 Text(challange.endDate).font(.body).italic().padding()
             }
             if challange.outcome {
@@ -71,6 +75,51 @@ struct ChallangeDetails: View {
             }
             .padding()
         }.navigationBarTitle("\(Config.session!.firstName) \(Config.session!.lastName)")
+    }
+}
+
+struct NewChallange: View {
+    @State(initialValue: "") var title: String;
+    @State(initialValue: "") var descp: String;
+    @State(initialValue: .init()) var end: Date;
+//    @State(initialValue: .init()) var endTime: Date;
+    @Binding var navhappen: Bool
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        return formatter
+    }
+    var body: some View {
+        VStack{
+            TextField("Title", text: self.$title).padding()
+            TextField("Description", text: self.$descp).padding()
+            DatePicker(selection: $end, in: Date()..., displayedComponents: .date) {
+                Text("")
+            }.padding()
+            Button("Send") {
+                guard let req = Config.getRequest(path: "/challenges", method: "POST") else { return }
+                let json = [
+                    "title": self.title,
+                    "description": self.descp,
+                    "endDate": "\(self.end)",
+                    "isActive": true,
+                    "outcome": false,
+                    "proofUrl": "",
+                    "author": "\(Config.session?.id)"
+                    ] as [String : Any]
+                if let jsonData = try? JSONSerialization.data(withJSONObject: json, options: []) {
+                    URLSession.shared.uploadTask(with: req, from: jsonData) { data, resp, err in
+                        if let httpResp = resp as? HTTPURLResponse {
+                            if httpResp.statusCode == 200 {
+                                self.navhappen.toggle()
+                            }
+                        }
+                    }.resume()
+                }
+            }
+            Spacer()
+        }
     }
 }
 

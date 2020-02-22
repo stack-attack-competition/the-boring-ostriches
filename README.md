@@ -11,7 +11,7 @@ TBA
 * 10-20% of user story coverage (infinite times better than nothing!)
 
 
-Deployed on [Heroku](fb-test.herokuapp.com) with the following command:
+Deployed on [Heroku](https://fb-test.herokuapp.com) with the following command:
 ```
 git subtree push --prefix the-boring-ostriches-backend heroku-fb master
 ```

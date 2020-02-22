@@ -1,7 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"net/http"
+	"github.com/go-chi/chi"
+)
 
 func main() {
-	fmt.Println("hello world")
+
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
+   
+
+	r := chi.NewRouter()
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte('{"hello": "world"}'))
+	})
+	http.ListenAndServe(":" + port, r)
 }

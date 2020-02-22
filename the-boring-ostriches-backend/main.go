@@ -100,7 +100,7 @@ func main() {
 		r.Get("/", listUsers)
 		r.Get("/{uuid}", getUser)
 		r.Get("/{uuid}/bets", getUserBets)
-		// r.Get("/{uuid}/challenges", getUserChallenges)
+		r.Get("/{uuid}/challenges", getUserChallenges)
 		r.Post("/", addUser)
 		r.Patch("/{uuid}", changeUser)
 		r.Delete("/{uuid}", deleteUser)
@@ -270,41 +270,61 @@ func getChallenge(w http.ResponseWriter, r *http.Request) {
 
 func getUserBets(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
-	var foundBets ostrich.BetSlice
+	foundBets := make(ostrich.BetSlice, 0)
+
+	if !Users.HasId(uuid) {
+		http.Error(w, http.StatusText(404), 404)
+		return
+	}
 
 	for _, v := range Bets {
 		if v.Author == uuid {
 			foundBets.Append(v)
 		}
 	}
-	if len(foundBets) > 0 {
-		b, err := json.Marshal(foundBets)
 
-		if err != nil {
-			log.Fatal(err)
-			http.Error(w, http.StatusText(500), 500)
-			return
-		}
+	b, err := json.Marshal(foundBets)
 
-		w.Write(b)
-	} else {
-		http.Error(w, http.StatusText(404), 404)
+	if err != nil {
+		log.Fatal(err)
+		http.Error(w, http.StatusText(500), 500)
+		return
 	}
+
+	w.Write(b)
+
+}
+
+func getUserChallenges(w http.ResponseWriter, r *http.Request) {
+	uuid := chi.URLParam(r, "uuid")
+	foundChallenges := make(ostrich.ChallengeSlice, 0)
+
+	if !Users.HasId(uuid) {
+		http.Error(w, http.StatusText(404), 404)
+		return
+	}
+
+	for _, v := range Challenges {
+		if v.Author == uuid {
+			foundChallenges.Append(v)
+		}
+	}
+	b, err := json.Marshal(foundChallenges)
+
+	if err != nil {
+		log.Fatal(err)
+		http.Error(w, http.StatusText(500), 500)
+		return
+	}
+
+	w.Write(b)
 }
 
 func getChallengeBets(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
 	foundBets := make(ostrich.BetSlice, 0)
 
-	challengeIdx := -1
-
-	for k, v := range Challenges {
-		if v.Id == uuid {
-			challengeIdx = k
-		}
-	}
-
-	if challengeIdx == -1 {
+	if !Challenges.HasId(uuid) {
 		http.Error(w, http.StatusText(404), 404)
 		return
 	}

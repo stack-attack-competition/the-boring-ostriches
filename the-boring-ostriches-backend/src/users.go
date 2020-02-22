@@ -42,15 +42,14 @@ func (users *UserSlice) EmailExists (email string) bool {
 	return false
 }
 
-// TODO:
-// * [NOT HERE!] handle that one bet should be added to only one user
-// * 
-func (user *User) AddBet(newBet Bet) {
-	user.Bets = append(user.Bets, newBet)
-	b, _ := json.Marshal(newBet)
-	println(string(b))
+func (users UserSlice) HasId (uuid string) bool {
 
-	bu, _ := json.Marshal(user)
-	println(string(bu))
+	for _, v := range users {
+		if v.Id == uuid {
+			return true
+		}
+	}
+
+	return false
 }
-
+ 

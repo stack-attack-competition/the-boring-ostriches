@@ -29,3 +29,14 @@ func (challenge Challenge) Serialize() []byte {
 
 	return b
 }
+
+func (challenges ChallengeSlice) HasId(uuid string) bool {
+
+	for _, v := range challenges {
+		if v.Id == uuid {
+			return true
+		}
+	}
+
+	return false
+}

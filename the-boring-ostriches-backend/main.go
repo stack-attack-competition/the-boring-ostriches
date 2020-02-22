@@ -14,10 +14,13 @@ import (
 	guuid "github.com/google/uuid"
 )
 
+// I am using these slices as "backend storage"
+// I'm sorry.
 var Users ostrich.UserSlice
 var Bets ostrich.BetSlice
 var Challenges ostrich.ChallengeSlice
 
+// Reads the test data
 func importStuff(suffix string) []byte {
 	dir, _ := os.Getwd()
 	path := path.Join(dir, suffix)
@@ -30,6 +33,7 @@ func importStuff(suffix string) []byte {
 	return byteValue
 }
 
+// I miss C++ templates
 func importUsers() {
 	byteValue := importStuff("testdata/users.json")
 
@@ -38,6 +42,7 @@ func importUsers() {
 	fmt.Println("Imported", len(Users), "user records")
 }
 
+// I miss C++ templates again
 func importBets() {
 	byteValue := importStuff("testdata/bets.json")
 
@@ -46,6 +51,7 @@ func importBets() {
 	fmt.Println("Imported", len(Bets), "bet records")
 }
 
+// And again
 func importChallenges() {
 	byteValue := importStuff("testdata/challenges.json")
 
@@ -98,14 +104,22 @@ func main() {
 		r.Get("/{uuid}/bets", getChallengeBets)
 	})
 
+	r.Route("/auth", func(r chi.Router) {
+		r.Post("/login", loginToApi)
+		r.Post("/register", addUser)
+	})
+
 	http.ListenAndServe(":"+port, r)
 }
 
+// This was my first working function
+// I miss C++ templates again
 func listUsers(w http.ResponseWriter, r *http.Request) {
 	showDeleted := r.URL.Query().Get("showDeleted")
 	var RetUsers ostrich.UserSlice
 
 	for _, v := range Users {
+		v.Password = ""
 		if showDeleted == "true" {
 			RetUsers.Append(v)
 		} else {
@@ -126,6 +140,7 @@ func listUsers(w http.ResponseWriter, r *http.Request) {
 	w.Write(b)
 }
 
+// God, did I tell you about how much I miss...
 func listBets(w http.ResponseWriter, r *http.Request) {
 	showDeleted := r.URL.Query().Get("showDeleted")
 	var RetBets ostrich.BetSlice
@@ -151,6 +166,7 @@ func listBets(w http.ResponseWriter, r *http.Request) {
 	w.Write(b)
 }
 
+// ... C++ templates :troll:
 func listChallenges(w http.ResponseWriter, r *http.Request) {
 	showDeleted := r.URL.Query().Get("showDeleted")
 	var RetChallenges ostrich.ChallengeSlice
@@ -177,15 +193,16 @@ func listChallenges(w http.ResponseWriter, r *http.Request) {
 }
 
 func getUser(w http.ResponseWriter, r *http.Request) {
+	// I loved that I can easily get out the info from URLs
 	uuid := chi.URLParam(r, "uuid")
 	_, err := guuid.Parse(uuid)
-	if err != nil {
 		http.Error(w, http.StatusText(400), 400)
 		return
 	}
-	println(uuid)
+
 	for _, v := range Users {
 		if v.Id == uuid {
+			v.Password = "" // if you comment this out, you'll leak sensitive data
 			w.Write(v.Serialize())
 			return
 		}
@@ -232,7 +249,7 @@ func getChallenge(w http.ResponseWriter, r *http.Request) {
 func getUserBets(w http.ResponseWriter, r *http.Request) {
 	uuid := chi.URLParam(r, "uuid")
 	var foundBets ostrich.BetSlice
-	println(uuid)
+
 	for _, v := range Bets {
 		if v.Author == uuid {
 			foundBets.Append(v)
@@ -511,4 +528,44 @@ func changeChallenge(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, http.StatusText(400), 400)
 		}
 	}
+}
+
+func loginToApi(w http.ResponseWriter, r *http.Request) {
+	var rawLogin map[string]interface{}
+	json.NewDecoder(r.Body).Decode(&rawLogin)
+
+	user, ok := rawLogin["email"].(string)
+
+	if !ok {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+
+	password, ok := rawLogin["password"].(string)
+
+	if !ok {
+		http.Error(w, http.StatusText(400), 400)
+		return
+	}
+
+	fmt.Printf("Login to API by %s\n", user)
+
+	credentialsOk := false
+
+	for _, v := range Users {
+		if v.Email == user && v.Password == password {
+			credentialsOk = true
+			v.Password = ""
+			w.Write(v.Serialize())
+			return
+		}
+	}
+
+	fmt.Println("Credentials match: ", credentialsOk)
+
+	if !credentialsOk {
+		http.Error(w, http.StatusText(403), 403)
+	}
+
+	// generateToken()
 }

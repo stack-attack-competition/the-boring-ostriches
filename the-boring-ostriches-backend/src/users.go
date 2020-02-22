@@ -13,7 +13,7 @@ type User struct {
 	LastName string `json:"lastName"`
 	Picture string `json:"pictureUrl"`
 	IsDeleted bool `json:"isDeleted"`
-	Password string `json:"-"`
+	Password string `json:"password,omitempty"`
 	Bets []Bet `json:"-"`
 }
 

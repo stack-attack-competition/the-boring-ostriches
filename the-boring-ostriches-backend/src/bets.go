@@ -3,11 +3,11 @@ package ostrich
 // Bet
 // id: valami
 type Bet struct {
-	id        string
-	isDeleted string
-	// author    &User
+	Id        string
+	IsDeleted bool
 	//challenge Challenge
-	inFavor bool
-	amount  int
-	result  int
+	InFavor bool
+	Amount  int
+	Result  int
+	Author  string
 }

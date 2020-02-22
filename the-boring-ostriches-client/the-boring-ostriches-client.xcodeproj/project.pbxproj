@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8097AA462401122000C0CE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA452401122000C0CE34 /* AppDelegate.swift */; };
+		8097AA482401122000C0CE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA472401122000C0CE34 /* SceneDelegate.swift */; };
+		8097AA4A2401122000C0CE34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA492401122000C0CE34 /* ContentView.swift */; };
+		8097AA4C2401122400C0CE34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8097AA4B2401122400C0CE34 /* Assets.xcassets */; };
+		8097AA4F2401122400C0CE34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8097AA4E2401122400C0CE34 /* Preview Assets.xcassets */; };
+		8097AA522401122400C0CE34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8097AA502401122400C0CE34 /* LaunchScreen.storyboard */; };
+		8097AA5D2401122400C0CE34 /* the_boring_ostriches_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA5C2401122400C0CE34 /* the_boring_ostriches_clientTests.swift */; };
+		8097AA682401122400C0CE34 /* the_boring_ostriches_clientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA672401122400C0CE34 /* the_boring_ostriches_clientUITests.swift */; };
+		8097AA7624011F0900C0CE34 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA7524011F0900C0CE34 /* Toast.swift */; };
+		8097AA78240127F000C0CE34 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA77240127F000C0CE34 /* MainView.swift */; };
+		8097AA7A24012B7C00C0CE34 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA7924012B7C00C0CE34 /* Models.swift */; };
+		8097AA7C240161E500C0CE34 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA7B240161E500C0CE34 /* ProfileView.swift */; };
+		8097AA7E2401624000C0CE34 /* ChallangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8097AA7D2401624000C0CE34 /* ChallangeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8097AA592401122400C0CE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8097AA3A2401121F00C0CE34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8097AA412401121F00C0CE34;
+			remoteInfo = "the-boring-ostriches-client";
+		};
+		8097AA642401122400C0CE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8097AA3A2401121F00C0CE34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8097AA412401121F00C0CE34;
+			remoteInfo = "the-boring-ostriches-client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8097AA422401122000C0CE34 /* the-boring-ostriches-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-boring-ostriches-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8097AA452401122000C0CE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8097AA472401122000C0CE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8097AA492401122000C0CE34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8097AA4B2401122400C0CE34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8097AA4E2401122400C0CE34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8097AA512401122400C0CE34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8097AA532401122400C0CE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8097AA582401122400C0CE34 /* the-boring-ostriches-clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "the-boring-ostriches-clientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8097AA5C2401122400C0CE34 /* the_boring_ostriches_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_boring_ostriches_clientTests.swift; sourceTree = "<group>"; };
+		8097AA5E2401122400C0CE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8097AA632401122400C0CE34 /* the-boring-ostriches-clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "the-boring-ostriches-clientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8097AA672401122400C0CE34 /* the_boring_ostriches_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_boring_ostriches_clientUITests.swift; sourceTree = "<group>"; };
+		8097AA692401122400C0CE34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8097AA7524011F0900C0CE34 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		8097AA77240127F000C0CE34 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8097AA7924012B7C00C0CE34 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8097AA7B240161E500C0CE34 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8097AA7D2401624000C0CE34 /* ChallangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallangeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8097AA3F2401121F00C0CE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA552401122400C0CE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA602401122400C0CE34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8097AA392401121F00C0CE34 = {
+			isa = PBXGroup;
+			children = (
+				8097AA442401122000C0CE34 /* the-boring-ostriches-client */,
+				8097AA5B2401122400C0CE34 /* the-boring-ostriches-clientTests */,
+				8097AA662401122400C0CE34 /* the-boring-ostriches-clientUITests */,
+				8097AA432401122000C0CE34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8097AA432401122000C0CE34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8097AA422401122000C0CE34 /* the-boring-ostriches-client.app */,
+				8097AA582401122400C0CE34 /* the-boring-ostriches-clientTests.xctest */,
+				8097AA632401122400C0CE34 /* the-boring-ostriches-clientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8097AA442401122000C0CE34 /* the-boring-ostriches-client */ = {
+			isa = PBXGroup;
+			children = (
+				8097AA452401122000C0CE34 /* AppDelegate.swift */,
+				8097AA472401122000C0CE34 /* SceneDelegate.swift */,
+				8097AA492401122000C0CE34 /* ContentView.swift */,
+				8097AA7924012B7C00C0CE34 /* Models.swift */,
+				8097AA77240127F000C0CE34 /* MainView.swift */,
+				8097AA7D2401624000C0CE34 /* ChallangeView.swift */,
+				8097AA7B240161E500C0CE34 /* ProfileView.swift */,
+				8097AA4B2401122400C0CE34 /* Assets.xcassets */,
+				8097AA502401122400C0CE34 /* LaunchScreen.storyboard */,
+				8097AA532401122400C0CE34 /* Info.plist */,
+				8097AA4D2401122400C0CE34 /* Preview Content */,
+				8097AA7524011F0900C0CE34 /* Toast.swift */,
+			);
+			path = "the-boring-ostriches-client";
+			sourceTree = "<group>";
+		};
+		8097AA4D2401122400C0CE34 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8097AA4E2401122400C0CE34 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8097AA5B2401122400C0CE34 /* the-boring-ostriches-clientTests */ = {
+			isa = PBXGroup;
+			children = (
+				8097AA5C2401122400C0CE34 /* the_boring_ostriches_clientTests.swift */,
+				8097AA5E2401122400C0CE34 /* Info.plist */,
+			);
+			path = "the-boring-ostriches-clientTests";
+			sourceTree = "<group>";
+		};
+		8097AA662401122400C0CE34 /* the-boring-ostriches-clientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8097AA672401122400C0CE34 /* the_boring_ostriches_clientUITests.swift */,
+				8097AA692401122400C0CE34 /* Info.plist */,
+			);
+			path = "the-boring-ostriches-clientUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8097AA412401121F00C0CE34 /* the-boring-ostriches-client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8097AA6C2401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-client" */;
+			buildPhases = (
+				8097AA3E2401121F00C0CE34 /* Sources */,
+				8097AA3F2401121F00C0CE34 /* Frameworks */,
+				8097AA402401121F00C0CE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "the-boring-ostriches-client";
+			productName = "the-boring-ostriches-client";
+			productReference = 8097AA422401122000C0CE34 /* the-boring-ostriches-client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8097AA572401122400C0CE34 /* the-boring-ostriches-clientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8097AA6F2401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-clientTests" */;
+			buildPhases = (
+				8097AA542401122400C0CE34 /* Sources */,
+				8097AA552401122400C0CE34 /* Frameworks */,
+				8097AA562401122400C0CE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8097AA5A2401122400C0CE34 /* PBXTargetDependency */,
+			);
+			name = "the-boring-ostriches-clientTests";
+			productName = "the-boring-ostriches-clientTests";
+			productReference = 8097AA582401122400C0CE34 /* the-boring-ostriches-clientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8097AA622401122400C0CE34 /* the-boring-ostriches-clientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8097AA722401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-clientUITests" */;
+			buildPhases = (
+				8097AA5F2401122400C0CE34 /* Sources */,
+				8097AA602401122400C0CE34 /* Frameworks */,
+				8097AA612401122400C0CE34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8097AA652401122400C0CE34 /* PBXTargetDependency */,
+			);
+			name = "the-boring-ostriches-clientUITests";
+			productName = "the-boring-ostriches-clientUITests";
+			productReference = 8097AA632401122400C0CE34 /* the-boring-ostriches-clientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8097AA3A2401121F00C0CE34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Robert Boros";
+				TargetAttributes = {
+					8097AA412401121F00C0CE34 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8097AA572401122400C0CE34 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8097AA412401121F00C0CE34;
+					};
+					8097AA622401122400C0CE34 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8097AA412401121F00C0CE34;
+					};
+				};
+			};
+			buildConfigurationList = 8097AA3D2401121F00C0CE34 /* Build configuration list for PBXProject "the-boring-ostriches-client" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8097AA392401121F00C0CE34;
+			productRefGroup = 8097AA432401122000C0CE34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8097AA412401121F00C0CE34 /* the-boring-ostriches-client */,
+				8097AA572401122400C0CE34 /* the-boring-ostriches-clientTests */,
+				8097AA622401122400C0CE34 /* the-boring-ostriches-clientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8097AA402401121F00C0CE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8097AA522401122400C0CE34 /* LaunchScreen.storyboard in Resources */,
+				8097AA4F2401122400C0CE34 /* Preview Assets.xcassets in Resources */,
+				8097AA4C2401122400C0CE34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA562401122400C0CE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA612401122400C0CE34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8097AA3E2401121F00C0CE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8097AA7E2401624000C0CE34 /* ChallangeView.swift in Sources */,
+				8097AA462401122000C0CE34 /* AppDelegate.swift in Sources */,
+				8097AA7624011F0900C0CE34 /* Toast.swift in Sources */,
+				8097AA482401122000C0CE34 /* SceneDelegate.swift in Sources */,
+				8097AA7A24012B7C00C0CE34 /* Models.swift in Sources */,
+				8097AA78240127F000C0CE34 /* MainView.swift in Sources */,
+				8097AA7C240161E500C0CE34 /* ProfileView.swift in Sources */,
+				8097AA4A2401122000C0CE34 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA542401122400C0CE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8097AA5D2401122400C0CE34 /* the_boring_ostriches_clientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8097AA5F2401122400C0CE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8097AA682401122400C0CE34 /* the_boring_ostriches_clientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8097AA5A2401122400C0CE34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8097AA412401121F00C0CE34 /* the-boring-ostriches-client */;
+			targetProxy = 8097AA592401122400C0CE34 /* PBXContainerItemProxy */;
+		};
+		8097AA652401122400C0CE34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8097AA412401121F00C0CE34 /* the-boring-ostriches-client */;
+			targetProxy = 8097AA642401122400C0CE34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8097AA502401122400C0CE34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8097AA512401122400C0CE34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8097AA6A2401122400C0CE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8097AA6B2401122400C0CE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8097AA6D2401122400C0CE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"the-boring-ostriches-client/Preview Content\"";
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "the-boring-ostriches-client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8097AA6E2401122400C0CE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"the-boring-ostriches-client/Preview Content\"";
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "the-boring-ostriches-client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8097AA702401122400C0CE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				INFOPLIST_FILE = "the-boring-ostriches-clientTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-clientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/the-boring-ostriches-client.app/the-boring-ostriches-client";
+			};
+			name = Debug;
+		};
+		8097AA712401122400C0CE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				INFOPLIST_FILE = "the-boring-ostriches-clientTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-clientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/the-boring-ostriches-client.app/the-boring-ostriches-client";
+			};
+			name = Release;
+		};
+		8097AA732401122400C0CE34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				INFOPLIST_FILE = "the-boring-ostriches-clientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-clientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "the-boring-ostriches-client";
+			};
+			name = Debug;
+		};
+		8097AA742401122400C0CE34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7KGS5K8ZW;
+				INFOPLIST_FILE = "the-boring-ostriches-clientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.borosr.the-boring-ostriches-clientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "the-boring-ostriches-client";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8097AA3D2401121F00C0CE34 /* Build configuration list for PBXProject "the-boring-ostriches-client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8097AA6A2401122400C0CE34 /* Debug */,
+				8097AA6B2401122400C0CE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8097AA6C2401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8097AA6D2401122400C0CE34 /* Debug */,
+				8097AA6E2401122400C0CE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8097AA6F2401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-clientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8097AA702401122400C0CE34 /* Debug */,
+				8097AA712401122400C0CE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8097AA722401122400C0CE34 /* Build configuration list for PBXNativeTarget "the-boring-ostriches-clientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8097AA732401122400C0CE34 /* Debug */,
+				8097AA742401122400C0CE34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8097AA3A2401121F00C0CE34 /* Project object */;
+}
